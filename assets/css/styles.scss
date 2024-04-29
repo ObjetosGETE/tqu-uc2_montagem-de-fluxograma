@@ -1,0 +1,358 @@
+$primary: #8AACCF;
+$red: #D8958F;
+$dark-grey: #5E6E7D;
+
+.oda-fluxograma {
+    position: relative;
+    height: 100vh;
+    padding-top: 1px;
+    background-color: #5E6E7D;
+
+    .loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        color: white;
+        background-color: $dark-grey;
+        z-index: 11;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-fluxograma {
+        background-color: rgb(158, 192, 227);
+        border: 1px solid white;
+        border-radius: 10px;
+        // color: white;
+        padding: 6px 24px;
+        min-width: 140px;
+        transition-duration: .3s;
+        display: block;
+        margin: 15px auto;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 2px black;
+        }
+    }
+
+    .tela-inicial {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        background-color: rgba($color: #333, $alpha: .7);
+        z-index: 12;
+
+        .msg {
+            border: 1px solid white;
+            background-color: #5E6E7D;
+            color: white;
+            width: 600px;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 2px 2px 2px black;
+            display: none;
+
+            h3 {
+                text-align: center;
+
+            }
+        }
+    }
+
+    .tela-1 {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn-fluxograma {
+            background-color: $dark-grey;
+            color: white;
+            margin: 25px 0;
+        }
+
+        .backdrop {
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: #333, $alpha: .9);
+        }
+
+        .msg {
+            border: 2px solid white;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform: translateY(50%) translateX(-50%);
+            border-radius: 15px;
+            width: 600px;
+            background-color: $primary;
+            padding: 25px 30px;
+            transition-duration: 1s;
+
+            &.hidden {
+                bottom: -1500px;
+                transition-duration: 1s;
+            }
+
+            p {
+                margin: 0;
+                margin-bottom: 15px;
+                line-height: 20px;
+            }
+        }
+
+        .fluxograma-1 {
+            display: block;
+            margin: auto;
+            width: fit-content;
+            background-color: white;
+            padding: 35px;
+
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: relative;
+
+            &.game-container {
+                border-radius: 15px;
+            }
+
+            .load {
+                height: 6px;
+                width: 100%;
+                left: 0;
+                top: 0;
+                transform: translateY(50%);
+                position: absolute;
+                margin-top: -10px;
+                background: $red;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+
+            .loading {
+                animation: loading 3s forwards;
+            }
+        }
+
+        .fluxograma-row {
+            display: flex;
+
+            &.flex-end {
+                justify-content: flex-end;
+            }
+
+            &.reverse-row {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .fluxograma-row:not(.reverse-row) .elemento {
+            margin-right: 40px;
+        }
+
+        .reverse-row .elemento {
+            margin-left: 40px;
+        }
+
+        .fluxograma-row:first-of-type {
+            padding-top: 25px;
+        }
+
+        .fluxograma-row:not(.reverse-row) .elemento:last-of-type {
+            margin-right: 0;
+        }
+
+        .reverse-row .elemento:last-of-type {
+            margin-left: 0;
+            margin-bottom: 28px;
+        }
+
+        .reverse-row .elemento:first-of-type {
+            margin-right: 10px;
+        }
+
+        .fluxograma-row.flex-end .elemento {
+            margin-right: 0;
+            margin-left: 40px;
+        }
+
+        .elemento {
+            position: relative;
+            text-align: center;
+        }
+
+        .elemento.retangulo,
+        .elemento.circulo {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .elemento.circulo {
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+        }
+
+        .elemento.losango {
+            position: relative;
+            height: 80px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .elemento.losango::after {
+            content: '';
+            border: 1px solid black;
+            position: absolute;
+            top: -10%;
+            left: -6%;
+            height: 120%;
+            width: 120%;
+            transform: rotate(50deg);
+        }
+    }
+
+    .elemento.seta-baixo::after {
+        content: '';
+        position: absolute;
+        background-image: url('../img/arrow-down.svg');
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .elemento.seta-dir::after {
+        content: '';
+        position: absolute;
+        background-image: url('../img/arrow-right.svg');
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        right: -35px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .elemento.seta-esq::after {
+        content: '';
+        position: absolute;
+        background-image: url('../img/arrow-right.svg');
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        left: -35px;
+        top: 50%;
+        transform: rotate(180deg) translateY(40%);
+    }
+
+    #losango-1 {
+        margin-right: 20px;
+        margin-top: 70px;
+        margin-bottom: 60px;
+
+        .seta {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            bottom: -62px;
+        }
+    }
+
+    #losango-2 {
+        margin-left: 60px;
+        margin-right: 25px;
+        margin-top: 20px;
+
+        .seta {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            left: -52px;
+            top: 0;
+
+            p {
+                margin: 0;
+            }
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .fluxograma-1.game-container {
+        display: none;
+        transform: scale(0.9);
+    }
+
+    .slot.elemento.retangulo {
+        border: none;
+        box-shadow: rgb(114, 114, 114) 0px 0px 10px 1px inset;
+    }
+
+    .card-container {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 700px;
+        padding: 15px;
+        margin-top: 10px;
+        background-color: #8AACCF;
+
+        .elemento {
+            cursor: grab;
+        }
+    }
+
+    .slot .elemento {
+        margin: 0 !important;
+    }
+
+}
+
+.gu-mirror.elemento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: grabbing;
+    font-size: 14px;
+}
+
+@keyframes loading {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnico em Qualidade - Elaboração de fluxogramas</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/dragula.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="wrapper" class="oda-fluxograma">
+        <div class="loader">
+            Carregando...
+        </div>
+        <div class="tela-inicial">
+            <div class="msg lefty">
+                <h3>Elaboração de fluxogramas</h3>
+                <p>A capacidade de elaborar fluxogramas precisos é fundamental no campo da qualidade, pois permite uma análise detalhada dos procedimentos e facilita a identificação de oportunidades de melhoria e a implementação de soluções eficazes. Este exercício prático visa não apenas reforçar a teoria estudada, mas também preparar você para aplicar essas competências na realidade dos ambientes organizacionais, nos quais a busca pela otimização dos processos e elevação dos padrões de qualidade é constante. </p>
+                <button class="btn-fluxograma btn-start">Iniciar</button>
+            </div>
+        </div>
+        <div class="tela-1">
+            <div class="backdrop">
+                <div class="msg hidden">
+                    <p>Você é o técnico em qualidade de uma rede de padarias e, depois de inspecionar os produtos de diferentes filiais, percebeu uma grande variação de cores, formatos e tamanhos do pão francês. Assim, para uniformizar o produto, você propõe um mapeamento do processo. Para isso, você entrevista um padeiro experiente da organização, que lhe apresenta o processo produtivo e enfatiza a importância das etapas de pesagem e mistura dos ingredientes, da cilindragem e modelação da massa e temperatura e tempo de assamento do pão.</p>
+                    <p>Com base nas informações coletadas, organize as atividades em um fluxograma, clicando no botão a seguir. </p>
+                    <button class="btn-fluxograma start-fluxograma-1">Elaborar fluxograma</button>
+                </div>
+            </div>
+            <div class="fluxograma-1 modelo">
+                <div class="load"></div>
+                <div class="fluxograma-row flex-end">
+                    <div class="circulo elemento seta-dir">Início</div>
+                    <div class="retangulo elemento seta-dir">Medir os ingredientes</div>
+                    <div class="retangulo elemento seta-dir">Misturar os ingredientes</div>
+                    <div class="retangulo elemento seta-dir">Cilindrar a massa</div>
+                    <div class="retangulo elemento seta-baixo">Dividir a massa</div>
+                </div>
+                <div class="fluxograma-row flex-end">
+                    <div id="losango-1" class="losango elemento">As porções têm 70g?
+                        <img src="assets/img/arrow-down.svg" alt="" class="seta">
+                    </div>
+                </div>
+                <div class="fluxograma-row reverse-row">
+                    <div class="retangulo elemento seta-esq">Modelar a massa</div>
+                    <div class="retangulo elemento seta-esq">Fermentação</div>
+                    <div class="retangulo elemento seta-esq">Preaquecer o forno</div>
+                    <div id="losango-2" class="losango elemento">Forno a 230 ºC?
+                        <div class="seta">
+                            <p>Sim</p>
+                            <img src="assets/img/arrow-right.svg" alt=""></div>
+                    </div>
+                    <div class="retangulo elemento seta-baixo">Assar os pães</div>
+                </div>
+                <div class="fluxograma-row flex-start">
+                    <div class="retangulo elemento seta-dir">Embalar os pães</div>
+                    <div class="circulo elemento">Fim</div>
+                </div>
+            </div>
+            <div class="fluxograma-1 game-container">
+                <div class="fluxograma-row flex-end">
+                    <div class="circulo elemento seta-dir">Início</div>
+                    <div id="slot-1" class="slot seta-dir elemento retangulo"></div>
+                    <div id="slot-2" class="slot seta-dir elemento retangulo"></div>
+                    <div id="slot-3" class="slot seta-dir elemento retangulo"></div>
+                    <div id="slot-4" class="slot retangulo elemento seta-baixo"></div>
+                </div>
+                <div class="fluxograma-row flex-end">
+                    <div id="losango-1" class="losango elemento">As porções têm 70g?
+                        <img src="assets/img/arrow-down.svg" alt="" class="seta">
+                    </div>
+                </div>
+                <div class="fluxograma-row reverse-row">
+                    <div id="slot-5" class="slot retangulo elemento seta-esq"></div>
+                    <div id="slot-6" class="slot retangulo elemento seta-esq"></div>
+                    <div id="slot-7" class="slot retangulo elemento seta-esq"></div>
+                    <div id="losango-2" class="losango elemento">Forno a 230 ºC?
+                        <div class="seta">
+                            <p>Sim</p>
+                            <img src="assets/img/arrow-right.svg" alt=""></div>
+                    </div>
+                    <div id="slot-8" class="slot retangulo elemento seta-baixo"></div>
+                </div>
+                <div class="fluxograma-row flex-start">
+                    <div id="slot-9" class="slot retangulo elemento seta-dir"></div>
+                    <div class="circulo elemento">Fim</div>
+                </div>
+                <div class="fluxograma-row card-container">
+                    <div data-target="slot-1" class="retangulo elemento card">Medir os ingredientes</div>
+                    <div data-target="slot-2" class="retangulo elemento card">Misturar os ingredientes</div>
+                    <div data-target="slot-3" class="retangulo elemento card">Cilindrar a massa</div>
+                    <div data-target="slot-4" class="retangulo elemento card">Dividir a massa</div>
+                    <div data-target="slot-5" class="retangulo elemento card">Modelar a massa</div>
+                    <div data-target="slot-6" class="retangulo elemento card">Fermentação</div>
+                    <div data-target="slot-7" class="retangulo elemento card">Preaquecer o forno</div>
+                    <div data-target="slot-8" class="retangulo elemento card">Assar os pães</div>
+                    <div data-target="slot-9" class="retangulo elemento card">Embalar os pães</div>
+                </div>
+            </div>
+        </div>
+        <div class="tela-2">
+
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/dragula.min.js"></script>
+    <script src="assets/js/game-custom.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
