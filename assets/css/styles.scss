@@ -70,11 +70,12 @@ $dark-grey: #5E6E7D;
         }
     }
 
-    .tela-1 {
+    .tela-1,
+    .tela-2 {
+        overflow: hidden;
         position: relative;
         height: 100%;
         width: 100%;
-        border-radius: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -94,6 +95,7 @@ $dark-grey: #5E6E7D;
         }
 
         .msg {
+            color: white;
             border: 2px solid white;
             position: absolute;
             bottom: 50%;
@@ -101,9 +103,13 @@ $dark-grey: #5E6E7D;
             transform: translateY(50%) translateX(-50%);
             border-radius: 15px;
             width: 600px;
-            background-color: $primary;
+            background-color: $dark-grey;
             padding: 25px 30px;
             transition-duration: 1s;
+
+            h4 {
+                text-align: center;
+            }
 
             &.hidden {
                 bottom: -1500px;
@@ -115,9 +121,14 @@ $dark-grey: #5E6E7D;
                 margin-bottom: 15px;
                 line-height: 20px;
             }
+
+            .start-fluxograma {
+                margin: 25px auto 10px auto;
+            }
         }
 
-        .fluxograma-1 {
+        .fluxograma-1,
+        .fluxograma-2 {
             display: block;
             margin: auto;
             width: fit-content;
@@ -308,7 +319,8 @@ $dark-grey: #5E6E7D;
         }
     }
 
-    .fluxograma-1.game-container {
+    .fluxograma-1.game-container,
+    .fluxograma-2.game-container {
         display: none;
         transform: scale(0.9);
     }
@@ -336,6 +348,45 @@ $dark-grey: #5E6E7D;
         margin: 0 !important;
     }
 
+    #losango-3 {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 70px;
+        margin-right: 40px;
+        height: 95px;
+        width: 95px;
+
+        p {
+            margin: 0;
+            margin-top: -15px;
+            margin-right: -5px;
+        }
+    }
+
+    #losango-3 .seta:first-of-type {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        bottom: 25px;
+        right: -70px;
+    }
+
+    #losango-3 .seta:last-of-type {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        bottom: -65px;
+        left: 28px;
+    }
+
+    .fluxograma-2 .pr {
+        padding-right: 180px;
+    }
+    .fluxograma-2 .pt {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }
 
 .gu-mirror.elemento {

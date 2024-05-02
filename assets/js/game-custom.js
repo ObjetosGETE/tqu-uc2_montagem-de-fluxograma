@@ -47,6 +47,22 @@ dragula({
   scrollable = true;
   console.log(el)
   $(el).parents('.elemento').addClass('correto');
+  let slots = $(el).parents('.game-container').find('.slot');
+  let qtCorretos = $(el).parents('.game-container').find('.correto').length;
+  // mudar if p/ slots.length == qtCorretos
+  if(qtCorretos > 1) {
+
+    // implementar feedback positivo
+
+    let proxTela = $(el).parents('.tela').next();
+    $(el).parents('.tela').fadeOut();
+    proxTela.fadeIn();
+    setTimeout(() => {
+      let msg = proxTela.find('.hidden')[0];
+      $(msg).removeClass('hidden')
+    }, 500);
+  }
+  
   // implementar feedback com audio
 }).on("cancel", function(){
   scrollable = true;

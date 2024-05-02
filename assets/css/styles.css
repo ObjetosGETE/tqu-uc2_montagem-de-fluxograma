@@ -58,28 +58,33 @@
 .oda-fluxograma .tela-inicial .msg h3 {
   text-align: center;
 }
-.oda-fluxograma .tela-1 {
+.oda-fluxograma .tela-1,
+.oda-fluxograma .tela-2 {
+  overflow: hidden;
   position: relative;
   height: 100%;
   width: 100%;
-  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.oda-fluxograma .tela-1 .btn-fluxograma {
+.oda-fluxograma .tela-1 .btn-fluxograma,
+.oda-fluxograma .tela-2 .btn-fluxograma {
   background-color: #5E6E7D;
   color: white;
   margin: 25px 0;
 }
-.oda-fluxograma .tela-1 .backdrop {
+.oda-fluxograma .tela-1 .backdrop,
+.oda-fluxograma .tela-2 .backdrop {
   position: absolute;
   z-index: 10;
   height: 100%;
   width: 100%;
   background-color: rgba(51, 51, 51, 0.9);
 }
-.oda-fluxograma .tela-1 .msg {
+.oda-fluxograma .tela-1 .msg,
+.oda-fluxograma .tela-2 .msg {
+  color: white;
   border: 2px solid white;
   position: absolute;
   bottom: 50%;
@@ -87,20 +92,33 @@
   transform: translateY(50%) translateX(-50%);
   border-radius: 15px;
   width: 600px;
-  background-color: #8AACCF;
+  background-color: #5E6E7D;
   padding: 25px 30px;
   transition-duration: 1s;
 }
-.oda-fluxograma .tela-1 .msg.hidden {
+.oda-fluxograma .tela-1 .msg h4,
+.oda-fluxograma .tela-2 .msg h4 {
+  text-align: center;
+}
+.oda-fluxograma .tela-1 .msg.hidden,
+.oda-fluxograma .tela-2 .msg.hidden {
   bottom: -1500px;
   transition-duration: 1s;
 }
-.oda-fluxograma .tela-1 .msg p {
+.oda-fluxograma .tela-1 .msg p,
+.oda-fluxograma .tela-2 .msg p {
   margin: 0;
   margin-bottom: 15px;
   line-height: 20px;
 }
-.oda-fluxograma .tela-1 .fluxograma-1 {
+.oda-fluxograma .tela-1 .msg .start-fluxograma,
+.oda-fluxograma .tela-2 .msg .start-fluxograma {
+  margin: 25px auto 10px auto;
+}
+.oda-fluxograma .tela-1 .fluxograma-1,
+.oda-fluxograma .tela-1 .fluxograma-2,
+.oda-fluxograma .tela-2 .fluxograma-1,
+.oda-fluxograma .tela-2 .fluxograma-2 {
   display: block;
   margin: auto;
   width: fit-content;
@@ -110,10 +128,16 @@
   border-bottom-right-radius: 15px;
   position: relative;
 }
-.oda-fluxograma .tela-1 .fluxograma-1.game-container {
+.oda-fluxograma .tela-1 .fluxograma-1.game-container,
+.oda-fluxograma .tela-1 .fluxograma-2.game-container,
+.oda-fluxograma .tela-2 .fluxograma-1.game-container,
+.oda-fluxograma .tela-2 .fluxograma-2.game-container {
   border-radius: 15px;
 }
-.oda-fluxograma .tela-1 .fluxograma-1 .load {
+.oda-fluxograma .tela-1 .fluxograma-1 .load,
+.oda-fluxograma .tela-1 .fluxograma-2 .load,
+.oda-fluxograma .tela-2 .fluxograma-1 .load,
+.oda-fluxograma .tela-2 .fluxograma-2 .load {
   height: 6px;
   width: 100%;
   left: 0;
@@ -125,47 +149,63 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.oda-fluxograma .tela-1 .fluxograma-1 .loading {
+.oda-fluxograma .tela-1 .fluxograma-1 .loading,
+.oda-fluxograma .tela-1 .fluxograma-2 .loading,
+.oda-fluxograma .tela-2 .fluxograma-1 .loading,
+.oda-fluxograma .tela-2 .fluxograma-2 .loading {
   animation: loading 3s forwards;
 }
-.oda-fluxograma .tela-1 .fluxograma-row {
+.oda-fluxograma .tela-1 .fluxograma-row,
+.oda-fluxograma .tela-2 .fluxograma-row {
   display: flex;
 }
-.oda-fluxograma .tela-1 .fluxograma-row.flex-end {
+.oda-fluxograma .tela-1 .fluxograma-row.flex-end,
+.oda-fluxograma .tela-2 .fluxograma-row.flex-end {
   justify-content: flex-end;
 }
-.oda-fluxograma .tela-1 .fluxograma-row.reverse-row {
+.oda-fluxograma .tela-1 .fluxograma-row.reverse-row,
+.oda-fluxograma .tela-2 .fluxograma-row.reverse-row {
   flex-direction: row-reverse;
 }
-.oda-fluxograma .tela-1 .fluxograma-row:not(.reverse-row) .elemento {
+.oda-fluxograma .tela-1 .fluxograma-row:not(.reverse-row) .elemento,
+.oda-fluxograma .tela-2 .fluxograma-row:not(.reverse-row) .elemento {
   margin-right: 40px;
 }
-.oda-fluxograma .tela-1 .reverse-row .elemento {
+.oda-fluxograma .tela-1 .reverse-row .elemento,
+.oda-fluxograma .tela-2 .reverse-row .elemento {
   margin-left: 40px;
 }
-.oda-fluxograma .tela-1 .fluxograma-row:first-of-type {
+.oda-fluxograma .tela-1 .fluxograma-row:first-of-type,
+.oda-fluxograma .tela-2 .fluxograma-row:first-of-type {
   padding-top: 25px;
 }
-.oda-fluxograma .tela-1 .fluxograma-row:not(.reverse-row) .elemento:last-of-type {
+.oda-fluxograma .tela-1 .fluxograma-row:not(.reverse-row) .elemento:last-of-type,
+.oda-fluxograma .tela-2 .fluxograma-row:not(.reverse-row) .elemento:last-of-type {
   margin-right: 0;
 }
-.oda-fluxograma .tela-1 .reverse-row .elemento:last-of-type {
+.oda-fluxograma .tela-1 .reverse-row .elemento:last-of-type,
+.oda-fluxograma .tela-2 .reverse-row .elemento:last-of-type {
   margin-left: 0;
   margin-bottom: 28px;
 }
-.oda-fluxograma .tela-1 .reverse-row .elemento:first-of-type {
+.oda-fluxograma .tela-1 .reverse-row .elemento:first-of-type,
+.oda-fluxograma .tela-2 .reverse-row .elemento:first-of-type {
   margin-right: 10px;
 }
-.oda-fluxograma .tela-1 .fluxograma-row.flex-end .elemento {
+.oda-fluxograma .tela-1 .fluxograma-row.flex-end .elemento,
+.oda-fluxograma .tela-2 .fluxograma-row.flex-end .elemento {
   margin-right: 0;
   margin-left: 40px;
 }
-.oda-fluxograma .tela-1 .elemento {
+.oda-fluxograma .tela-1 .elemento,
+.oda-fluxograma .tela-2 .elemento {
   position: relative;
   text-align: center;
 }
 .oda-fluxograma .tela-1 .elemento.retangulo,
-.oda-fluxograma .tela-1 .elemento.circulo {
+.oda-fluxograma .tela-1 .elemento.circulo,
+.oda-fluxograma .tela-2 .elemento.retangulo,
+.oda-fluxograma .tela-2 .elemento.circulo {
   height: 100px;
   width: 100px;
   border: 1px solid black;
@@ -173,12 +213,14 @@
   justify-content: center;
   align-items: center;
 }
-.oda-fluxograma .tela-1 .elemento.circulo {
+.oda-fluxograma .tela-1 .elemento.circulo,
+.oda-fluxograma .tela-2 .elemento.circulo {
   height: 80px;
   width: 80px;
   border-radius: 100%;
 }
-.oda-fluxograma .tela-1 .elemento.losango {
+.oda-fluxograma .tela-1 .elemento.losango,
+.oda-fluxograma .tela-2 .elemento.losango {
   position: relative;
   height: 80px;
   width: 80px;
@@ -189,7 +231,8 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.oda-fluxograma .tela-1 .elemento.losango::after {
+.oda-fluxograma .tela-1 .elemento.losango::after,
+.oda-fluxograma .tela-2 .elemento.losango::after {
   content: "";
   border: 1px solid black;
   position: absolute;
@@ -261,7 +304,8 @@
 .oda-fluxograma #losango-2 .seta img {
   transform: rotate(180deg);
 }
-.oda-fluxograma .fluxograma-1.game-container {
+.oda-fluxograma .fluxograma-1.game-container,
+.oda-fluxograma .fluxograma-2.game-container {
   display: none;
   transform: scale(0.9);
 }
@@ -283,6 +327,41 @@
 }
 .oda-fluxograma .slot .elemento {
   margin: 0 !important;
+}
+.oda-fluxograma #losango-3 {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 70px;
+  margin-right: 40px;
+  height: 95px;
+  width: 95px;
+}
+.oda-fluxograma #losango-3 p {
+  margin: 0;
+  margin-top: -15px;
+  margin-right: -5px;
+}
+.oda-fluxograma #losango-3 .seta:first-of-type {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  bottom: 25px;
+  right: -70px;
+}
+.oda-fluxograma #losango-3 .seta:last-of-type {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  bottom: -65px;
+  left: 28px;
+}
+.oda-fluxograma .fluxograma-2 .pr {
+  padding-right: 180px;
+}
+.oda-fluxograma .fluxograma-2 .pt {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .gu-mirror.elemento {
