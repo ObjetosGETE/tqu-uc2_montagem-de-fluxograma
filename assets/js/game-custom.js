@@ -2,7 +2,8 @@
 var containers = [
   // Container com os cards que serão realocados
   // Não mexer
-  document.querySelector(".card-container"),
+  document.querySelector(".fluxograma-1 .card-container"),
+  document.querySelector(".fluxograma-2 .card-container"),
 
   // Containers que irão receber os cards
   document.querySelector("#slot-1"),
@@ -14,7 +15,14 @@ var containers = [
   document.querySelector('#slot-6'),
   document.querySelector('#slot-7'),
   document.querySelector('#slot-8'),
-  document.querySelector('#slot-9')
+  document.querySelector('#slot-9'),
+  document.querySelector('#slot-10'),
+  document.querySelector('#slot-11'),
+  document.querySelector('#slot-12'),
+  document.querySelector('#slot-13'),
+  document.querySelector('#slot-14'),
+  document.querySelector('#slot-15'),
+  document.querySelector('#slot-16'),
 ];
 var audio = new Audio();
 var erro = 0;
@@ -50,7 +58,7 @@ dragula({
   let slots = $(el).parents('.game-container').find('.slot');
   let qtCorretos = $(el).parents('.game-container').find('.correto').length;
   // mudar if p/ slots.length == qtCorretos
-  if(qtCorretos > 1) {
+  if(slots.length == qtCorretos) {
 
     // implementar feedback positivo
 
@@ -66,6 +74,7 @@ dragula({
   // implementar feedback com audio
 }).on("cancel", function(){
   scrollable = true;
+      // implementar feedback negativo
 
       // Executa o áudio e a modal necessária
       // Também é possível fazer algum teste aqui caso necessário.
