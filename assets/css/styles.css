@@ -363,6 +363,45 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.oda-fluxograma .fluxograma-2 {
+  font-size: 14px;
+}
+.oda-fluxograma .fluxograma-2 .sim-1, .oda-fluxograma .fluxograma-2 .nao-1, .oda-fluxograma .fluxograma-2 .sim-2, .oda-fluxograma .fluxograma-2 .nao-2 {
+  position: absolute;
+}
+.oda-fluxograma .fluxograma-2 .sim-1 {
+  bottom: -50px;
+  left: 0px;
+}
+.oda-fluxograma .fluxograma-2 .nao-1 {
+  right: -60px;
+  top: 20px;
+}
+.oda-fluxograma .fluxograma-2 .nao-2 {
+  left: -35px;
+  top: 10px;
+}
+.oda-fluxograma .fluxograma-2 .sim-2 {
+  bottom: -35px;
+  left: 0px;
+}
+.oda-fluxograma .fluxograma-2 .sim-2::after {
+  content: "";
+  background-image: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  bottom: -5px;
+  left: 40px;
+}
+.oda-fluxograma .fluxograma-2 .mb {
+  margin-bottom: 50px;
+  margin-left: 50px !important;
+}
+.oda-fluxograma .fluxograma-2 .circulo.mt {
+  margin-top: 10px;
+}
 
 .gu-mirror.elemento {
   display: flex;

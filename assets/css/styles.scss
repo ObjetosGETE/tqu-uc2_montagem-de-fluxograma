@@ -387,6 +387,46 @@ $dark-grey: #5E6E7D;
         margin-top: 50px;
         margin-bottom: 50px;
     }
+    .fluxograma-2 {
+        font-size: 14px;
+        .sim-1, .nao-1, .sim-2, .nao-2 {
+            position: absolute;
+        }
+        .sim-1 {
+            bottom: -50px;
+            left: 0px;
+        }
+        .nao-1 {
+            right: -60px;
+            top: 20px;
+        }
+        .nao-2 {
+            left: -35px;
+            top: 10px;
+        }
+        .sim-2 {
+            bottom: -35px;
+            left: 0px;
+
+            &::after {
+                content: '';
+                background-image: url('../img/arrow-down.svg');
+                background-repeat: no-repeat;
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                bottom: -5px;
+                left: 40px;
+            }
+        }
+        .mb {
+            margin-bottom: 50px;
+            margin-left: 50px !important;
+        }
+        .circulo.mt {
+            margin-top: 10px;
+        }
+    }
 }
 
 .gu-mirror.elemento {
