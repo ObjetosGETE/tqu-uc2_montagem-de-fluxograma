@@ -55,7 +55,6 @@
   border-radius: 25px;
   padding: 20px;
   box-shadow: 2px 2px 2px black;
-  display: none;
 }
 .oda-fluxograma .tela-inicial .msg h3,
 .oda-fluxograma .tela-final .msg h3 {
@@ -333,6 +332,7 @@
   border-radius: 15px;
   background-color: #8AACCF;
   box-shadow: 2px 2px 3px #333;
+  min-height: 126px;
 }
 .oda-fluxograma .card-container .elemento {
   margin: 5px;

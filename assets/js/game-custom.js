@@ -53,21 +53,21 @@ dragula({
   scrollable = false;
 }).on("drop", function (el, target) {
   scrollable = true;
-  console.log(el)
   $(el).parents('.elemento').addClass('correto');
   let slots = $(el).parents('.game-container').find('.slot');
   let qtCorretos = $(el).parents('.game-container').find('.correto').length;
 
-  if (slots.length == qtCorretos) {
+  if (slots.length > 1) {
 
     // feedback positivo
     const feedback = $(el).parents('.game-container').find('.feedback-positivo');
     const btnContinuar = $(el).parents('.game-container').find('.btn-continuar')
     $(feedback).fadeIn();
     let proxTela = $(el).parents('.tela').next();
+    console.log(proxTela)
     $(btnContinuar).click(function () {
       $(el).parents('.tela').fadeOut();
-      proxTela.fadeIn();
+      $(proxTela).fadeIn();
       setTimeout(() => {
         let msg = proxTela.find('.hidden')[0];
         $(msg).removeClass('hidden')

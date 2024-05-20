@@ -10,7 +10,7 @@ $('.btn-start').click(function () {
     $('.tela-inicial').fadeOut();
     $('.tela-1 .msg').removeClass('hidden');
 })
-
+$('.btn-restart').click(function () { location.reload() })
 $('.start-fluxograma').click(function () {
     const tela = $(this).parents('.tela');
     const contador = $(tela).find('.load')

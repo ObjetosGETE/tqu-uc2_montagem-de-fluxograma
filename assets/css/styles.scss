@@ -62,7 +62,7 @@ $dark-grey: #5E6E7D;
             border-radius: 25px;
             padding: 20px;
             box-shadow: 2px 2px 2px black;
-            display: none;
+            // display: none;
 
             h3 {
                 text-align: center;
@@ -350,6 +350,7 @@ $dark-grey: #5E6E7D;
         border-radius: 15px;
         background-color: #8AACCF;
         box-shadow: 2px 2px 3px #333;
+        min-height: 126px;
 
         .elemento {
             margin: 5px;
