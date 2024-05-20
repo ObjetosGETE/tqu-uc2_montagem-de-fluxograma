@@ -32,7 +32,8 @@
   transform: translateY(-2px);
   box-shadow: 2px 2px 2px black;
 }
-.oda-fluxograma .tela-inicial {
+.oda-fluxograma .tela-inicial,
+.oda-fluxograma .tela-final {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +46,8 @@
   background-color: rgba(51, 51, 51, 0.7);
   z-index: 12;
 }
-.oda-fluxograma .tela-inicial .msg {
+.oda-fluxograma .tela-inicial .msg,
+.oda-fluxograma .tela-final .msg {
   border: 1px solid white;
   background-color: #5E6E7D;
   color: white;
@@ -55,7 +57,8 @@
   box-shadow: 2px 2px 2px black;
   display: none;
 }
-.oda-fluxograma .tela-inicial .msg h3 {
+.oda-fluxograma .tela-inicial .msg h3,
+.oda-fluxograma .tela-final .msg h3 {
   text-align: center;
 }
 .oda-fluxograma .tela-1,
@@ -377,7 +380,10 @@
 .oda-fluxograma .fluxograma-2 {
   font-size: 14px;
 }
-.oda-fluxograma .fluxograma-2 .sim-1, .oda-fluxograma .fluxograma-2 .nao-1, .oda-fluxograma .fluxograma-2 .sim-2, .oda-fluxograma .fluxograma-2 .nao-2 {
+.oda-fluxograma .fluxograma-2 .sim-1,
+.oda-fluxograma .fluxograma-2 .nao-1,
+.oda-fluxograma .fluxograma-2 .sim-2,
+.oda-fluxograma .fluxograma-2 .nao-2 {
   position: absolute;
 }
 .oda-fluxograma .fluxograma-2 .sim-1 {
@@ -412,6 +418,36 @@
 }
 .oda-fluxograma .fluxograma-2 .circulo.mt {
   margin-top: 10px;
+}
+.oda-fluxograma .feedback-negativo {
+  color: red;
+  margin: 0;
+  padding: 15px 0;
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.oda-fluxograma .feedback-negativo.active {
+  opacity: 1;
+}
+.oda-fluxograma .feedback-positivo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 3px 3px 3px #333;
+  z-index: 10;
+  background-color: #8AACCF;
+  padding: 25px;
+  border-radius: 15px;
+  width: 500px;
+  text-align: center;
+  display: none;
+}
+.oda-fluxograma .feedback-positivo p {
+  font-size: 18px;
+}
+.oda-fluxograma .feedback-positivo .btn-continuar {
+  margin: 40px auto 0 auto;
 }
 
 .gu-mirror.elemento {
