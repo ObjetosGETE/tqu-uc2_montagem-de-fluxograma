@@ -5,6 +5,7 @@ window.onload = () => {
     }, 700);
 }
 $('.tela-2').hide();
+$('.tela-final').hide();
 $('.btn-start').click(function () {
     $('.tela-inicial').fadeOut();
     $('.tela-1 .msg').removeClass('hidden');

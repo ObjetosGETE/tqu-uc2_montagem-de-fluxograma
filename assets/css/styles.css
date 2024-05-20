@@ -61,6 +61,9 @@
 .oda-fluxograma .tela-final .msg h3 {
   text-align: center;
 }
+.oda-fluxograma .tela-final {
+  z-index: 11;
+}
 .oda-fluxograma .tela-1,
 .oda-fluxograma .tela-2 {
   position: relative;
