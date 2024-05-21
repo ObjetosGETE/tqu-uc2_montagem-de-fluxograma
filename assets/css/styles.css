@@ -11,12 +11,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-size: 32px;
   color: white;
   background-color: #5E6E7D;
-  z-index: 11;
+  z-index: 20;
   width: 100%;
   height: 100%;
+}
+.oda-fluxograma .loader img {
+  position: absolute;
+  bottom: 40px;
+}
+.oda-fluxograma .loader .loadicon {
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
 }
 .oda-fluxograma .btn-fluxograma {
   background-color: rgb(158, 192, 227);

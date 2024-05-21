@@ -1,8 +1,10 @@
 window.onload = () => {
-    $('.loader').fadeOut();
     setTimeout(() => {
-        $('.oda-fluxograma .tela-inicial .msg').fadeIn();
-    }, 700);
+        $('.loader').fadeOut();
+        setTimeout(() => {
+            $('.oda-fluxograma .tela-inicial .msg').fadeIn();
+        }, 700);
+    }, 1000);
 }
 $('.tela-2').hide();
 $('.tela-final').hide();

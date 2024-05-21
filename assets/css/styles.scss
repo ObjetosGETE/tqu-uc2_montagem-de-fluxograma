@@ -15,12 +15,29 @@ $dark-grey: #5E6E7D;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         font-size: 32px;
         color: white;
         background-color: $dark-grey;
-        z-index: 11;
+        z-index: 20;
         width: 100%;
         height: 100%;
+
+        img {
+            position: absolute;
+            bottom: 40px;
+        }
+
+        .loadicon {
+            margin: 0 0 2em;
+            height: 100px;
+            width: 20%;
+            text-align: center;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+            vertical-align: top;
+        }
     }
 
     .btn-fluxograma {
@@ -257,12 +274,14 @@ $dark-grey: #5E6E7D;
             transform: rotate(50deg);
         }
     }
+
     .slot.correto {
-        
+
         .retangulo {
             border: 2px solid green;
             background-color: rgba(55, 200, 55, .3)
         }
+
         &::before {
             content: '';
             background-image: url('../img/check.svg');
@@ -278,6 +297,7 @@ $dark-grey: #5E6E7D;
             border-radius: 50%;
         }
     }
+
     .elemento.seta-baixo::after {
         content: '';
         position: absolute;
