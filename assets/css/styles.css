@@ -251,6 +251,24 @@
   width: 120%;
   transform: rotate(50deg);
 }
+.oda-fluxograma .slot.correto .retangulo {
+  border: 2px solid green;
+  background-color: rgba(55, 200, 55, 0.3);
+}
+.oda-fluxograma .slot.correto::before {
+  content: "";
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  right: -7px;
+  top: -7px;
+  z-index: 12;
+  background-color: rgba(55, 230, 55, 0.6);
+  border-radius: 50%;
+}
 .oda-fluxograma .elemento.seta-baixo::after {
   content: "";
   position: absolute;
@@ -428,6 +446,23 @@
   padding: 15px 0;
   opacity: 0;
   transition-duration: 0.3s;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+.oda-fluxograma .feedback-negativo::before {
+  content: "";
+  background-image: url("../img/wrong.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
 }
 .oda-fluxograma .feedback-negativo.active {
   opacity: 1;
