@@ -357,6 +357,17 @@
   top: 50%;
   transform: rotate(180deg) translateY(40%);
 }
+.oda-fluxograma .elemento.seta-cima::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
 .oda-fluxograma #losango-1 {
   margin-right: 20px;
   margin-top: 70px;
@@ -564,6 +575,80 @@
   }
   100% {
     width: 0%;
+  }
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .oda-fluxograma .tela-1 .fluxograma-1 {
+    padding-right: 25px;
+    padding-top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .oda-fluxograma .tela-1 .fluxograma-1 .fluxograma-row {
+    display: none;
+  }
+  .oda-fluxograma .mobile #losango-2 {
+    margin-left: 30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+  .mobile {
+    display: flex;
+  }
+  .mobile .elemento {
+    margin: 15px;
+  }
+  .mobile .mobile-row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .mobile .mobile-row.row-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .fluxograma-1 .mobile #losango-1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  .fluxograma-1 .mobile .nao-1 {
+    position: absolute;
+    top: unset !important;
+    right: unset !important;
+    left: -40px;
+    bottom: 0px;
+    height: fit-content;
+  }
+  .fluxograma-1 .mobile .nao-1 img {
+    transform: scaleX(-1);
+    height: auto;
+    width: 45px;
+  }
+  .fluxograma-1 .mobile .nao-1 p {
+    position: absolute;
+    right: -15px !important;
+    top: unset !important;
+    bottom: 60px;
+  }
+  .fluxograma-1 .mobile .nao-2 {
+    position: absolute;
+    bottom: 40%;
+    top: unset !important;
+    right: -80px !important;
+    left: unset !important;
+  }
+  .fluxograma-1 .mobile .nao-2 img {
+    transform: rotate(-90deg) scaleY(-1) !important;
+  }
+  .fluxograma-1 .mobile #losango-1 .seta {
+    bottom: 25%;
+    right: -65px;
+    transform: rotate(-90deg);
   }
 }
 
