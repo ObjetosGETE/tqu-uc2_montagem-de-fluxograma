@@ -11,7 +11,7 @@ $('.tela-final').hide();
 $('.btn-start').click(function () {
     $('.tela-inicial').fadeOut();
     $('.tela-1 .msg').removeClass('hidden');
-})
+});
 
 $('.start-fluxograma').click(function () {
     const tela = $(this).parents('.tela');
@@ -26,4 +26,4 @@ $('.start-fluxograma').click(function () {
             $(gameContainer).fadeIn();
         }, 800);
     }, 3000);
-})
+});

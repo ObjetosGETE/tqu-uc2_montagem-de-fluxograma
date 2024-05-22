@@ -184,12 +184,47 @@ $dark-grey: #5E6E7D;
             }
         }
 
+        .fluxograma-1 {
+            padding-right: 80px;
+            .nao-1 {
+                position: absolute;
+                right: -75px;
+                top: -70px;
+                img {
+                    height: 200px;
+                }
+                p {
+                    position: absolute;
+                    top: 85px;
+                    right: 25px;
+                    font-size: 18px;
+                }
+            }
+            .nao-2 {
+                position: absolute;
+                left: 29.5%;
+                top: -40px;
+
+                img {
+                    width: 150px;
+                    transform: scaleX(-1);
+                }
+                p {
+                    position: absolute;
+                    top: -30px;
+                    left: 20%;
+                    font-size: 18px;
+                }
+            }
+        }
+
         .fluxograma-2.game-container {
             margin-top: -30px;
         }
 
         .fluxograma-row {
             display: flex;
+            position: relative;
 
             &.flex-end {
                 justify-content: flex-end;

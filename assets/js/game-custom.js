@@ -35,7 +35,7 @@ var listener = function (e) {
   if (!scrollable) {
     e.preventDefault();
   }
-}
+};
 
 document.addEventListener('touchmove', listener, { passive: false });
 let drake;
@@ -58,7 +58,7 @@ function setupDragula() {
     let slots = $(el).parents('.game-container').find('.slot');
     let qtCorretos = $(el).parents('.game-container').find('.correto').length;
 
-    if (slots.length > 1) {
+    if (slots.length == qtCorretos) {
 
       // feedback positivo
       const feedback = $(el).parents('.game-container').find('.feedback-positivo');
@@ -87,7 +87,7 @@ function setupDragula() {
     audio.load(); //load the new source
     audio.play(); //play
   });
-}
+};
 setupDragula();
 
 // document.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive:false });
@@ -103,7 +103,7 @@ function resetCards() {
     console.log($('.fluxograma-2.game-container .slot .card')[index])
     $('.fluxograma-2 .card-container')[0].append($('.fluxograma-2.game-container .slot .card')[0])
   };
-}
+};
 
 $('.btn-restart').click(function () {
   resetCards();
@@ -119,9 +119,9 @@ $('.btn-restart').click(function () {
 
   setTimeout(() => {
     $('.tela-inicial').fadeIn();
-    $('.tela-1 .backdrop').fadeIn();   
+    $('.tela-1 .backdrop').fadeIn();
     $('.tela-2 .backdrop').fadeIn();
     $('.tela-inicial .backdrop').fadeIn();
     $('.tela-1').fadeIn();
   }, 500);
-})
+});
