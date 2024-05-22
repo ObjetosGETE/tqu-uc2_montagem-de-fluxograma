@@ -532,6 +532,13 @@ $dark-grey: #5E6E7D;
         .circulo.mt {
             margin-top: 10px;
         }
+        .seta-1 {
+            position: absolute;
+            top: 0;
+            width: 460px;
+            
+            transform: scaleX(-1);
+        }
     }
 
     .feedback-negativo {
