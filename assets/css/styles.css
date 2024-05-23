@@ -67,6 +67,7 @@
   background-color: #5E6E7D;
   color: white;
   width: 600px;
+  max-width: 100%;
   border-radius: 25px;
   padding: 20px;
   box-shadow: 2px 2px 2px black;
@@ -112,6 +113,7 @@
   transform: translateY(50%) translateX(-50%);
   border-radius: 15px;
   width: 600px;
+  max-width: 100%;
   background-color: #5E6E7D;
   padding: 25px 30px;
   transition-duration: 1s;
@@ -362,10 +364,11 @@
   position: absolute;
   background-image: url("../img/arrow-down.svg");
   background-repeat: no-repeat;
+  background-size: 70%;
   height: 30px;
   width: 30px;
-  top: -35px;
-  left: 50%;
+  top: -32px;
+  left: 48%;
   transform: translateX(-50%) rotate(180deg);
 }
 .oda-fluxograma #losango-1 {
@@ -390,9 +393,12 @@
   width: 30px;
   left: -52px;
   top: 0;
+  transform: scale(0.8);
 }
 .oda-fluxograma #losango-2 .seta p {
   margin: 0;
+  margin-left: -10px;
+  font-size: 20px;
 }
 .oda-fluxograma #losango-2 .seta img {
   transform: rotate(180deg);
@@ -614,7 +620,18 @@
   }
   .fluxograma-1 .mobile #losango-1 {
     margin-top: 50px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+  .fluxograma-1 .mobile #losango-1 .sim-1 {
+    position: absolute;
+    right: -45px;
+    top: -20px;
+  }
+  .fluxograma-1 .mobile #losango-1 .seta {
+    bottom: 0;
+    right: -50px;
+    top: 10px;
+    transform: rotate(-90deg);
   }
   .fluxograma-1 .mobile .nao-1 {
     position: absolute;
@@ -645,10 +662,33 @@
   .fluxograma-1 .mobile .nao-2 img {
     transform: rotate(-90deg) scaleY(-1) !important;
   }
-  .fluxograma-1 .mobile #losango-1 .seta {
-    bottom: 25%;
-    right: -65px;
+  .oda-fluxograma #losango-2 .seta {
+    top: -70px;
+    right: 20px;
+    left: unset !important;
+  }
+  .oda-fluxograma #losango-2 .seta p {
+    position: absolute;
+    left: -35px;
+  }
+  .oda-fluxograma #losango-2 .seta img {
     transform: rotate(-90deg);
+  }
+  .oda-fluxograma .elemento.seta-baixo::after {
+    bottom: -30px;
+    left: 40%;
+    transform: scale(0.9);
+  }
+  .oda-fluxograma .tela-1 .elemento.circulo {
+    position: relative;
+    margin-left: 20px;
+  }
+  .oda-fluxograma .tela-1 .elemento.circulo.seta-baixo::after {
+    right: 20px;
+    left: unset;
+  }
+  .oda-fluxograma .tela-1 .elemento.circulo:last-of-type {
+    margin-left: 28px;
   }
 }
 

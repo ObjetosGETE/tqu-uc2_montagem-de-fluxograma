@@ -76,6 +76,7 @@ $dark-grey: #5E6E7D;
             background-color: #5E6E7D;
             color: white;
             width: 600px;
+            max-width: 100%;
             border-radius: 25px;
             padding: 20px;
             box-shadow: 2px 2px 2px black;
@@ -126,6 +127,7 @@ $dark-grey: #5E6E7D;
             transform: translateY(50%) translateX(-50%);
             border-radius: 15px;
             width: 600px;
+            max-width: 100%;
             background-color: $dark-grey;
             padding: 25px 30px;
             transition-duration: 1s;
@@ -379,10 +381,11 @@ $dark-grey: #5E6E7D;
         position: absolute;
         background-image: url('../img/arrow-down.svg');
         background-repeat: no-repeat;
+        background-size: 70%;
         height: 30px;
         width: 30px;
-        top: -35px;
-        left: 50%;
+        top: -32px;
+        left: 48%;
         transform: translateX(-50%) rotate(180deg);
     }
 
@@ -410,9 +413,12 @@ $dark-grey: #5E6E7D;
             width: 30px;
             left: -52px;
             top: 0;
+            transform: scale(.8);
 
             p {
                 margin: 0;
+                margin-left: -10px;
+                font-size: 20px;
             }
 
             img {
@@ -644,15 +650,18 @@ $dark-grey: #5E6E7D;
         padding-top: 0;
         margin-top: 20px;
         margin-bottom: 20px;
+
         .fluxograma-row {
             display: none;
         }
     }
+
     .oda-fluxograma .mobile #losango-2 {
         margin-left: 30px;
         margin-top: 60px;
         margin-bottom: 50px;
     }
+
     .mobile {
         display: flex;
 
@@ -672,10 +681,22 @@ $dark-grey: #5E6E7D;
             }
         }
     }
+
     .fluxograma-1 .mobile {
         #losango-1 {
             margin-top: 50px;
-            margin-bottom: 0;
+            margin-bottom: 10px;
+            .sim-1 {
+                position: absolute;
+                right: -45px;
+                top: -20px;
+            }
+            .seta {
+                bottom: 0;
+                right: -50px;
+                top: 10px;
+                transform: rotate(-90deg);
+            }
         }
 
         .nao-1 {
@@ -712,10 +733,36 @@ $dark-grey: #5E6E7D;
             }
         }
 
-        #losango-1 .seta {
-            bottom: 25%;
-            right: -65px;
+
+    }
+
+    .oda-fluxograma #losango-2 .seta {
+        top: -70px ;
+        right: 20px;
+        left: unset !important;
+        p {
+            position: absolute;
+            left: -35px;
+        }
+        img {
             transform: rotate(-90deg);
         }
+    }
+    .oda-fluxograma .elemento.seta-baixo::after {
+        bottom: -30px;
+        left: 40%;
+        transform: scale(.9);
+    }
+    .oda-fluxograma .tela-1 .elemento.circulo {
+        position: relative;
+        margin-left: 20px;
+
+        &.seta-baixo::after {
+            right: 20px;
+            left: unset;
+        }
+    }
+    .oda-fluxograma .tela-1 .elemento.circulo:last-of-type {
+        margin-left: 28px;
     }
 }
