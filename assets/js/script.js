@@ -8,6 +8,7 @@ window.onload = () => {
 }
 $('.tela-2').hide();
 $('.tela-final').hide();
+$('.game-container').hide();
 $('.btn-start').click(function () {
     $('.tela-inicial').fadeOut();
     $('.tela-1 .msg').removeClass('hidden');

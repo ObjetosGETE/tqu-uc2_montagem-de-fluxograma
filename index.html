@@ -133,10 +133,10 @@
             <div class="fluxograma-1 game-container">
                 <div class="fluxograma-row flex-end">
                     <div class="circulo elemento seta-dir">Início</div>
-                    <div id="slot-1" class="slot seta-dir elemento retangulo"></div>
-                    <div id="slot-2" class="slot seta-dir elemento retangulo"></div>
-                    <div id="slot-3" class="slot seta-dir elemento retangulo"></div>
-                    <div id="slot-4" class="slot retangulo elemento seta-baixo"></div>
+                    <div class="slot slot-1 seta-dir elemento retangulo"></div>
+                    <div class="slot slot-2 seta-dir elemento retangulo"></div>
+                    <div class="slot slot-3 seta-dir elemento retangulo"></div>
+                    <div class="slot slot-4 retangulo elemento seta-baixo"></div>
                 </div>
                 <div class="fluxograma-row flex-end">
                     <div id="losango-1" class="losango elemento">As porções têm 70g?
@@ -148,9 +148,9 @@
                     </div>
                 </div>
                 <div class="fluxograma-row reverse-row">
-                    <div id="slot-5" class="slot retangulo elemento seta-esq"></div>
-                    <div id="slot-6" class="slot retangulo elemento seta-esq"></div>
-                    <div id="slot-7" class="slot retangulo elemento seta-esq"></div>
+                    <div class="slot slot-5 retangulo elemento seta-esq"></div>
+                    <div class="slot slot-6 retangulo elemento seta-esq"></div>
+                    <div class="slot slot-7 retangulo elemento seta-esq"></div>
                     <div class="nao-2">
                         <img src="assets/img/seta2.svg" alt="">
                         <p>Não</p>
@@ -161,12 +161,13 @@
                             <img src="assets/img/arrow-right.svg" alt="">
                         </div>
                     </div>
-                    <div id="slot-8" class="slot retangulo elemento seta-baixo"></div>
+                    <div class="slot slot-8 retangulo elemento seta-baixo"></div>
                 </div>
                 <div class="fluxograma-row flex-start">
-                    <div id="slot-9" class="slot retangulo elemento seta-dir"></div>
+                    <div class="slot slot-9 retangulo elemento seta-dir"></div>
                     <div class="circulo elemento">Fim</div>
                 </div>
+                
                 <p class="feedback-negativo">Ops! Este não é o local dessa etapa do fluxograma! Tente novamente.</p>
                 <div class="feedback-positivo">
                     <p>Parabéns! Você completou corretamente este fluxograma.</p>
@@ -185,7 +186,43 @@
                     <div data-target="slot-8" class="retangulo elemento card">Assar os pães</div>
                     <div data-target="slot-9" class="retangulo elemento card">Embalar os pães</div>
                 </div>
-
+                <div class="mobile">
+                    <div class="flex">
+                        <div class="mobile-row">
+                            <div class="circulo elemento seta-baixo">Início</div>
+                            <div class="slot slot-1 retangulo elemento seta-baixo"></div>
+                            <div class="slot slot-2 retangulo elemento seta-baixo"></div>
+                            <div class="slot slot-3 retangulo elemento seta-baixo"></div>
+                            <div class="slot slot-4 retangulo elemento seta-baixo"></div>
+                            <div id="losango-1" class="losango elemento">As porções têm 70g?
+                                <p class="sim-1">Sim</p>
+                                <img src="assets/img/arrow-down.svg" alt="" class="seta">
+                            </div>
+                            <div class="nao-1">
+                                <img src="assets/img/seta1.svg" alt="">
+                                <p>Não</p>
+                            </div>
+                        </div>
+                        <div class="mobile-row row-reverse">
+                            <div class="slot slot-5 retangulo elemento seta-cima"></div>
+                            <div class="slot slot-6 retangulo elemento seta-cima"></div>
+                            <div class="slot slot-7 retangulo elemento seta-cima"></div>
+                            <div class="nao-2">
+                                <img src="assets/img/seta2.svg" alt="">
+                                <p>Não</p>
+                            </div>
+                            <div id="losango-2" class="losango elemento">Forno a 230 ºC?
+                                <div class="seta">
+                                    <p>Sim</p>
+                                    <img src="assets/img/arrow-right.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="slot slot-8 retangulo elemento seta-cima"></div>
+                            <div class="slot slot-9 retangulo elemento seta-cima"></div>
+                            <div class="circulo elemento">Fim</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="tela-2 tela">

@@ -6,16 +6,24 @@ var containers = [
   document.querySelector(".fluxograma-2 .card-container"),
 
   // Containers que irão receber os cards
-  document.querySelector("#slot-1"),
-  document.querySelector('#slot-2'),
-  document.querySelector('#slot-3'),
-  document.querySelector('#slot-3'),
-  document.querySelector('#slot-4'),
-  document.querySelector('#slot-5'),
-  document.querySelector('#slot-6'),
-  document.querySelector('#slot-7'),
-  document.querySelector('#slot-8'),
-  document.querySelector('#slot-9'),
+  document.querySelectorAll(".slot-1")[0],
+  document.querySelectorAll(".slot-1")[1],
+  document.querySelectorAll('.slot-2')[0],
+  document.querySelectorAll('.slot-2')[1],
+  document.querySelectorAll('.slot-3')[0],
+  document.querySelectorAll('.slot-3')[1],
+  document.querySelectorAll('.slot-4')[0],
+  document.querySelectorAll('.slot-4')[1],
+  document.querySelectorAll('.slot-5')[0],
+  document.querySelectorAll('.slot-5')[1],
+  document.querySelectorAll('.slot-6')[0],
+  document.querySelectorAll('.slot-6')[1],
+  document.querySelectorAll('.slot-7')[0],
+  document.querySelectorAll('.slot-7')[1],
+  document.querySelectorAll('.slot-8')[0],
+  document.querySelectorAll('.slot-8')[1],
+  document.querySelectorAll('.slot-9')[0],
+  document.querySelectorAll('.slot-9')[1],
   document.querySelector('#slot-10'),
   document.querySelector('#slot-11'),
   document.querySelector('#slot-12'),
@@ -47,15 +55,16 @@ function setupDragula() {
     revertOnSpill: true,
     direction: 'vertical',
     accepts: function (el, target, source, sibling) {
-      return el.dataset.target == target.id;
+      return target.classList.contains(el.dataset.target);
     }
   }).on('drag', function (el, source) {
     // On mobile this prevents the default page scrolling while dragging an item.
     scrollable = false;
   }).on("drop", function (el, target) {
+    console.log(target.classList)
     scrollable = true;
     $(el).parents('.elemento').addClass('correto');
-    let slots = $(el).parents('.game-container').find('.slot');
+    let slots = $(el).parents('.game-container').find('.fluxograma-row .slot');
     let qtCorretos = $(el).parents('.game-container').find('.correto').length;
 
     if (slots.length == qtCorretos) {
@@ -75,7 +84,8 @@ function setupDragula() {
         }, 500);
       })
     }
-  }).on("cancel", function (el) {
+  }).on("cancel", function (el, target) {
+    console.log(target.classList)
     scrollable = true;
     // feedback negativo
     const feedback = $(el).parents('.game-container').find('.feedback-negativo');

@@ -601,11 +601,12 @@ $dark-grey: #5E6E7D;
         left: 50%;
         transform: translateX(-50%);
         box-shadow: 3px 3px 3px #333;
-        z-index: 12;
+        z-index: 13;
         background-color: #8AACCF;
         padding: 25px;
         border-radius: 15px;
         width: 500px;
+        max-width: 100%;
         text-align: center;
         display: none;
 
@@ -649,9 +650,14 @@ $dark-grey: #5E6E7D;
         padding-right: 25px;
         padding-top: 0;
         margin-top: 20px;
-        margin-bottom: 20px;
-
-        .fluxograma-row {
+        margin-bottom: 10px;
+        
+        display: flex;
+        flex-direction: column-reverse;
+        &.game-container {
+            margin-top: -35px;
+        }
+        .fluxograma-row:not(.card-container) {
             display: none;
         }
     }
@@ -664,6 +670,13 @@ $dark-grey: #5E6E7D;
 
     .mobile {
         display: flex;
+
+        .flex {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
 
         .elemento {
             margin: 15px;
@@ -686,11 +699,13 @@ $dark-grey: #5E6E7D;
         #losango-1 {
             margin-top: 50px;
             margin-bottom: 10px;
+
             .sim-1 {
                 position: absolute;
                 right: -45px;
                 top: -20px;
             }
+
             .seta {
                 bottom: 0;
                 right: -50px;
@@ -737,22 +752,26 @@ $dark-grey: #5E6E7D;
     }
 
     .oda-fluxograma #losango-2 .seta {
-        top: -70px ;
+        top: -70px;
         right: 20px;
         left: unset !important;
+
         p {
             position: absolute;
             left: -35px;
         }
+
         img {
             transform: rotate(-90deg);
         }
     }
+
     .oda-fluxograma .elemento.seta-baixo::after {
         bottom: -30px;
         left: 40%;
         transform: scale(.9);
     }
+
     .oda-fluxograma .tela-1 .elemento.circulo {
         position: relative;
         margin-left: 20px;
@@ -762,7 +781,13 @@ $dark-grey: #5E6E7D;
             left: unset;
         }
     }
+
     .oda-fluxograma .tela-1 .elemento.circulo:last-of-type {
         margin-left: 28px;
     }
+
+    .oda-fluxograma .tela-1 .fluxograma-row.card-container .elemento {
+        margin: 15px;
+    }
+
 }
