@@ -24,13 +24,20 @@ var containers = [
   document.querySelectorAll('.slot-8')[1],
   document.querySelectorAll('.slot-9')[0],
   document.querySelectorAll('.slot-9')[1],
-  document.querySelector('#slot-10'),
-  document.querySelector('#slot-11'),
-  document.querySelector('#slot-12'),
-  document.querySelector('#slot-13'),
-  document.querySelector('#slot-14'),
-  document.querySelector('#slot-15'),
-  document.querySelector('#slot-16'),
+  document.querySelectorAll('.slot-10')[0],
+  document.querySelectorAll('.slot-10')[1],
+  document.querySelectorAll('.slot-11')[0],
+  document.querySelectorAll('.slot-11')[1],
+  document.querySelectorAll('.slot-12')[0],
+  document.querySelectorAll('.slot-12')[1],
+  document.querySelectorAll('.slot-13')[0],
+  document.querySelectorAll('.slot-13')[1],
+  document.querySelectorAll('.slot-14')[0],
+  document.querySelectorAll('.slot-14')[1],
+  document.querySelectorAll('.slot-15')[0],
+  document.querySelectorAll('.slot-15')[1],
+  document.querySelectorAll('.slot-16')[0],
+  document.querySelectorAll('.slot-16')[1]
 ];
 var audio = new Audio();
 var erro = 0;
@@ -67,7 +74,7 @@ function setupDragula() {
     let slots = $(el).parents('.game-container').find('.fluxograma-row .slot');
     let qtCorretos = $(el).parents('.game-container').find('.correto').length;
 
-    if (slots.length == qtCorretos) {
+    if (slots.length > 2) {
 
       // feedback positivo
       const feedback = $(el).parents('.game-container').find('.feedback-positivo');
@@ -109,7 +116,7 @@ function resetCards() {
     console.log($('.fluxograma-1.game-container .slot .card')[index])
     $('.fluxograma-1 .card-container')[0].append($('.fluxograma-1.game-container .slot .card')[0])
   };
-  for (let index = 0; index < arrayFluxograma1.length; index++) {
+  for (let index = 0; index < arrayFluxograma2.length; index++) {
     console.log($('.fluxograma-2.game-container .slot .card')[index])
     $('.fluxograma-2 .card-container')[0].append($('.fluxograma-2.game-container .slot .card')[0])
   };

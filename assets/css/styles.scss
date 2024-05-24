@@ -643,20 +643,40 @@ $dark-grey: #5E6E7D;
     display: none;
 }
 
+.seta-mobile {
+    display: none;
+}
+
 @media (max-width: 600px) {
+    .seta-mobile {
+        display: block;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        bottom: -60px;
+    }
+
+    .nao-mobile {
+        position: absolute;
+        bottom: -60px;
+        left: 0px;
+    }
 
     // versao mobile
-    .oda-fluxograma .tela-1 .fluxograma-1 {
+    .oda-fluxograma .tela-1 .fluxograma-1,
+    .oda-fluxograma .tela-2 .fluxograma-2 {
         padding-right: 25px;
         padding-top: 0;
         margin-top: 20px;
         margin-bottom: 10px;
-        
+
         display: flex;
         flex-direction: column-reverse;
+
         &.game-container {
             margin-top: -35px;
         }
+
         .fluxograma-row:not(.card-container) {
             display: none;
         }
@@ -670,6 +690,7 @@ $dark-grey: #5E6E7D;
 
     .mobile {
         display: flex;
+        justify-content: space-between;
 
         .flex {
             display: flex;
@@ -699,6 +720,7 @@ $dark-grey: #5E6E7D;
         #losango-1 {
             margin-top: 50px;
             margin-bottom: 10px;
+
 
             .sim-1 {
                 position: absolute;
@@ -751,6 +773,10 @@ $dark-grey: #5E6E7D;
 
     }
 
+    .fluxograma-2 .mobile .mobile-row:last-of-type {
+        padding-top: 150px;
+    }
+
     .oda-fluxograma #losango-2 .seta {
         top: -70px;
         right: 20px;
@@ -768,11 +794,12 @@ $dark-grey: #5E6E7D;
 
     .oda-fluxograma .elemento.seta-baixo::after {
         bottom: -30px;
-        left: 40%;
+        left: 37%;
         transform: scale(.9);
     }
 
-    .oda-fluxograma .tela-1 .elemento.circulo {
+    .oda-fluxograma .tela-1 .elemento.circulo,
+    .oda-fluxograma .tela-2 .elemento.circulo {
         position: relative;
         margin-left: 20px;
 
@@ -782,12 +809,45 @@ $dark-grey: #5E6E7D;
         }
     }
 
-    .oda-fluxograma .tela-1 .elemento.circulo:last-of-type {
+    .oda-fluxograma .tela-1 .elemento.circulo:last-of-type,
+    .oda-fluxograma .tela-2 .elemento.circulo:last-of-type {
         margin-left: 28px;
     }
 
-    .oda-fluxograma .tela-1 .fluxograma-row.card-container .elemento {
+    .oda-fluxograma .tela-1 .fluxograma-row.card-container .elemento,
+    .oda-fluxograma .tela-2 .fluxograma-row.card-container .elemento {
         margin: 15px;
     }
 
+    .oda-fluxograma .loader img {
+        position: static;
+    }
+
+    .oda-fluxograma .fluxograma-2 .sim-1 {
+        bottom: 40px;
+        right: -140px;
+    }
+
+    .oda-fluxograma .fluxograma-2 #losango-1 p {
+        line-height: 14px;
+        font-size: 13px;
+        margin-right: -6px;
+    }
+    .oda-fluxograma .fluxograma-2 #losango-1 {
+        margin-top: 40px;
+    }
+    .oda-fluxograma .fluxograma-2 #losango-1 .seta {
+        transform: rotate(-90deg);
+        bottom: 20px;
+        right: -60px;
+    }
+
+    .oda-fluxograma .fluxograma-2 .nao-1 {
+        top: 220px;
+        right: -180px;
+
+        img {
+            height: 250px;
+        }
+    }
 }
