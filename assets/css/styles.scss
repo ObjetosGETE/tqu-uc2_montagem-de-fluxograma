@@ -449,6 +449,7 @@ $dark-grey: #5E6E7D;
         background-color: #8AACCF;
         box-shadow: 2px 2px 3px #333;
         min-height: 126px;
+        min-width: 230px;
 
         .elemento {
             margin: 5px;
@@ -662,14 +663,19 @@ $dark-grey: #5E6E7D;
         left: 0px;
     }
 
+    .oda-fluxograma .tela-1,
+    .oda-fluxograma .tela-2 {
+        overflow-x: hidden;
+    }
+
     // versao mobile
     .oda-fluxograma .tela-1 .fluxograma-1,
     .oda-fluxograma .tela-2 .fluxograma-2 {
-        padding-right: 25px;
+        padding-right: 15px;
+        padding-left: 15px;
         padding-top: 0;
         margin-top: 20px;
         margin-bottom: 10px;
-
         display: flex;
         flex-direction: column-reverse;
 
@@ -833,9 +839,11 @@ $dark-grey: #5E6E7D;
         font-size: 13px;
         margin-right: -6px;
     }
+
     .oda-fluxograma .fluxograma-2 #losango-1 {
         margin-top: 40px;
     }
+
     .oda-fluxograma .fluxograma-2 #losango-1 .seta {
         transform: rotate(-90deg);
         bottom: 20px;
@@ -848,6 +856,15 @@ $dark-grey: #5E6E7D;
 
         img {
             height: 250px;
+        }
+    }
+    .oda-fluxograma .fluxograma-2.game-container .nao-1 {
+        top: 200px;
+        right: -260px;
+
+        img {
+            height: 250px;
+            transform: scale(.9);
         }
     }
 }

@@ -423,6 +423,7 @@
   background-color: #8AACCF;
   box-shadow: 2px 2px 3px #333;
   min-height: 126px;
+  min-width: 230px;
 }
 .oda-fluxograma .card-container .elemento {
   margin: 5px;
@@ -605,9 +606,14 @@
     bottom: -60px;
     left: 0px;
   }
+  .oda-fluxograma .tela-1,
+  .oda-fluxograma .tela-2 {
+    overflow-x: hidden;
+  }
   .oda-fluxograma .tela-1 .fluxograma-1,
   .oda-fluxograma .tela-2 .fluxograma-2 {
-    padding-right: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
     padding-top: 0;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -758,6 +764,14 @@
   }
   .oda-fluxograma .fluxograma-2 .nao-1 img {
     height: 250px;
+  }
+  .oda-fluxograma .fluxograma-2.game-container .nao-1 {
+    top: 200px;
+    right: -260px;
+  }
+  .oda-fluxograma .fluxograma-2.game-container .nao-1 img {
+    height: 250px;
+    transform: scale(0.9);
   }
 }
 
