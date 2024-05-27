@@ -412,6 +412,9 @@
   border: none;
   box-shadow: rgb(114, 114, 114) 0px 0px 10px 1px inset;
 }
+.oda-fluxograma .fluxograma-1.game-container .card-container {
+  margin-right: -26px;
+}
 .oda-fluxograma .card-container {
   justify-content: center;
   align-items: center;

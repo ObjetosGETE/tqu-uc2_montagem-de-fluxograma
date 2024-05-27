@@ -438,6 +438,10 @@ $dark-grey: #5E6E7D;
         box-shadow: rgb(114, 114, 114) 0px 0px 10px 1px inset;
     }
 
+    .fluxograma-1.game-container .card-container {
+        margin-right: -26px;
+    }
+
     .card-container {
         justify-content: center;
         align-items: center;
@@ -858,6 +862,7 @@ $dark-grey: #5E6E7D;
             height: 250px;
         }
     }
+
     .oda-fluxograma .fluxograma-2.game-container .nao-1 {
         top: 200px;
         right: -260px;
