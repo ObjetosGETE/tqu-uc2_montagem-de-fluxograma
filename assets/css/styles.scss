@@ -166,6 +166,7 @@ $dark-grey: #5E6E7D;
 
             &.game-container {
                 border-radius: 15px;
+                padding-bottom: 380px;
             }
 
             .load {
@@ -226,10 +227,11 @@ $dark-grey: #5E6E7D;
         }
 
         .fluxograma-2.game-container {
-            margin-top: -30px;
+            margin-top: 20px;
+            padding-bottom: 280px;
         }
 
-        .fluxograma-row {
+        .fluxograma-row:not(.card-container) {
             display: flex;
             position: relative;
 
@@ -430,7 +432,7 @@ $dark-grey: #5E6E7D;
     .fluxograma-1.game-container,
     .fluxograma-2.game-container {
         display: none;
-        transform: scale(0.9);
+        // transform: scale(0.9);
     }
 
     .slot.elemento.retangulo {
@@ -443,9 +445,14 @@ $dark-grey: #5E6E7D;
     }
 
     .card-container {
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
         max-width: 700px;
         padding: 15px;
         margin: 10px auto;
@@ -532,13 +539,13 @@ $dark-grey: #5E6E7D;
         }
 
         .nao-2 {
-            left: -35px;
-            top: 10px;
+            bottom: -30px;
+            left: 0px;
         }
 
         .sim-2 {
-            bottom: -35px;
-            left: 0px;
+            left: -35px;
+            bottom: 10px;
 
             &::after {
                 content: '';
@@ -547,11 +554,17 @@ $dark-grey: #5E6E7D;
                 position: absolute;
                 height: 30px;
                 width: 30px;
-                bottom: -5px;
-                left: 40px;
+                bottom: -45px;
+                left: 70px;
             }
         }
+        .pr-2 {
+            padding-right: 330px;
 
+            .circulo:last-of-type {
+                margin-right: 30px;
+            }
+        }
         .mb {
             margin-bottom: 50px;
             margin-left: 50px !important;
@@ -561,12 +574,19 @@ $dark-grey: #5E6E7D;
             margin-top: 10px;
         }
 
-        .seta-1 {
+        .seta-4 {
             position: absolute;
-            top: 0;
-            width: 460px;
+            top: -10px;
+            right: 40px;
+            width: 370px;
+        }
 
-            transform: scaleX(-1);
+        &.modelo {
+            padding-top: 40px;
+
+            .seta-4 {
+                top: -35px;
+            }
         }
     }
 
@@ -684,7 +704,8 @@ $dark-grey: #5E6E7D;
         flex-direction: column-reverse;
 
         &.game-container {
-            margin-top: -35px;
+            // margin-top: -35px;
+            padding-bottom: 0;
         }
 
         .fluxograma-row:not(.card-container) {
@@ -701,6 +722,7 @@ $dark-grey: #5E6E7D;
     .mobile {
         display: flex;
         justify-content: space-between;
+        transform: scale(.9);
 
         .flex {
             display: flex;
@@ -854,22 +876,35 @@ $dark-grey: #5E6E7D;
         right: -60px;
     }
 
-    .oda-fluxograma .fluxograma-2 .nao-1 {
-        top: 220px;
-        right: -180px;
-
-        img {
-            height: 250px;
-        }
-    }
-
     .oda-fluxograma .fluxograma-2.game-container .nao-1 {
-        top: 200px;
-        right: -260px;
+        top: 240px;
+        right: -280px;
 
         img {
             height: 250px;
-            transform: scale(.9);
+            transform: scale(.8);
         }
     }
+
+    .oda-fluxograma .card-container {
+        position: static;
+        margin-right: auto !important;
+        margin-left: auto;
+        transform: unset;
+    }
+
+    .oda-fluxograma .fluxograma-2.game-container .nao-1 .seta-4-mobile {
+        transform: rotate(90deg);
+        width: 230px;
+        height: 190px;
+        position: absolute;
+        right: -63px;
+    }
+
+    .oda-fluxograma .fluxograma-2.game-container .nao-1 p {
+        position: absolute;
+        bottom: -250px;
+        right: 35px;
+    }
+
 }
