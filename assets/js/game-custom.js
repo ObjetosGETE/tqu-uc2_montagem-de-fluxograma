@@ -74,7 +74,7 @@ function setupDragula() {
     let slots = $(el).parents('.game-container').find('.fluxograma-row .slot');
     let qtCorretos = $(el).parents('.game-container').find('.correto').length;
 
-    if (slots.length > 1) {
+    if (slots.length == qtCorretos) {
 
       // feedback positivo
       const feedback = $(el).parents('.game-container').find('.feedback-positivo');
