@@ -166,7 +166,7 @@ $dark-grey: #5E6E7D;
 
             &.game-container {
                 border-radius: 15px;
-                padding-bottom: 380px;
+                padding-bottom: 450px;
             }
 
             .load {
@@ -228,7 +228,13 @@ $dark-grey: #5E6E7D;
 
         .fluxograma-2.game-container {
             margin-top: 20px;
-            padding-bottom: 280px;
+            padding-bottom: 40px;
+
+            .feedback-negativo {
+                position: relative;
+                transform: unset;
+                left: unset;
+            }
         }
 
         .fluxograma-row:not(.card-container) {
@@ -320,6 +326,7 @@ $dark-grey: #5E6E7D;
     }
 
     .slot.correto {
+        pointer-events: none;
 
         .retangulo {
             border: 2px solid green;
@@ -444,13 +451,18 @@ $dark-grey: #5E6E7D;
         margin-right: -26px;
     }
 
+    .fluxograma-2.game-container .card-container {
+        position: static;
+        transform: unset;
+    }
+
     .card-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         position: fixed;
-        bottom: 10px;
+        bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
         max-width: 700px;
@@ -558,6 +570,7 @@ $dark-grey: #5E6E7D;
                 left: 70px;
             }
         }
+
         .pr-2 {
             padding-right: 330px;
 
@@ -565,6 +578,7 @@ $dark-grey: #5E6E7D;
                 margin-right: 30px;
             }
         }
+
         .mb {
             margin-bottom: 50px;
             margin-left: 50px !important;
@@ -597,9 +611,12 @@ $dark-grey: #5E6E7D;
         opacity: 0;
         transition-duration: .3s;
         text-align: center;
-        position: relative;
         width: fit-content;
         margin: auto;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
 
         &::before {
             content: '';
@@ -673,6 +690,21 @@ $dark-grey: #5E6E7D;
 }
 
 @media (max-width: 600px) {
+    .oda-fluxograma .feedback-negativo {
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 3px 3px 3px #333;
+        bottom: 15px;
+        z-index: 1000;
+        padding-left: 25px;
+        width: 90%;
+        pointer-events: none;
+
+        &::before {
+            left: 10px;
+        }
+    }
+
     .seta-mobile {
         display: block;
         position: absolute;
@@ -705,7 +737,7 @@ $dark-grey: #5E6E7D;
 
         &.game-container {
             // margin-top: -35px;
-            padding-bottom: 0;
+            padding-bottom: 200px;
         }
 
         .fluxograma-row:not(.card-container) {
@@ -876,7 +908,8 @@ $dark-grey: #5E6E7D;
         right: -60px;
     }
 
-    .oda-fluxograma .fluxograma-2.game-container .nao-1 {
+    .oda-fluxograma .fluxograma-2.game-container .nao-1,
+    .oda-fluxograma .fluxograma-2.modelo .nao-1 {
         top: 240px;
         right: -280px;
 
@@ -886,14 +919,23 @@ $dark-grey: #5E6E7D;
         }
     }
 
-    .oda-fluxograma .card-container {
-        position: static;
-        margin-right: auto !important;
-        margin-left: auto;
-        transform: unset;
+    .oda-fluxograma .fluxograma-2.modelo .nao-1 {
+        right: -182px;
     }
 
-    .oda-fluxograma .fluxograma-2.game-container .nao-1 .seta-4-mobile {
+    .oda-fluxograma .card-container {
+        // position: static;
+        width: 90%;
+        top: 70%;
+        bottom: unset;
+        z-index: 10;
+        margin-right: auto !important;
+        margin-left: auto;
+        // transform: unset;
+    }
+
+    .oda-fluxograma .fluxograma-2.game-container .nao-1 .seta-4-mobile,
+    .oda-fluxograma .fluxograma-2.modelo .nao-1 .seta-4-mobile {
         transform: rotate(90deg);
         width: 230px;
         height: 190px;
@@ -901,7 +943,8 @@ $dark-grey: #5E6E7D;
         right: -63px;
     }
 
-    .oda-fluxograma .fluxograma-2.game-container .nao-1 p {
+    .oda-fluxograma .fluxograma-2.game-container .nao-1 p,
+    .oda-fluxograma .fluxograma-2.modelo .nao-1 p {
         position: absolute;
         bottom: -250px;
         right: 35px;

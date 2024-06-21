@@ -155,7 +155,7 @@
 .oda-fluxograma .tela-2 .fluxograma-1.game-container,
 .oda-fluxograma .tela-2 .fluxograma-2.game-container {
   border-radius: 15px;
-  padding-bottom: 380px;
+  padding-bottom: 450px;
 }
 .oda-fluxograma .tela-1 .fluxograma-1 .load,
 .oda-fluxograma .tela-1 .fluxograma-2 .load,
@@ -220,7 +220,13 @@
 .oda-fluxograma .tela-1 .fluxograma-2.game-container,
 .oda-fluxograma .tela-2 .fluxograma-2.game-container {
   margin-top: 20px;
-  padding-bottom: 280px;
+  padding-bottom: 40px;
+}
+.oda-fluxograma .tela-1 .fluxograma-2.game-container .feedback-negativo,
+.oda-fluxograma .tela-2 .fluxograma-2.game-container .feedback-negativo {
+  position: relative;
+  transform: unset;
+  left: unset;
 }
 .oda-fluxograma .tela-1 .fluxograma-row:not(.card-container),
 .oda-fluxograma .tela-2 .fluxograma-row:not(.card-container) {
@@ -309,6 +315,9 @@
   height: 120%;
   width: 120%;
   transform: rotate(50deg);
+}
+.oda-fluxograma .slot.correto {
+  pointer-events: none;
 }
 .oda-fluxograma .slot.correto .retangulo {
   border: 2px solid green;
@@ -416,13 +425,17 @@
 .oda-fluxograma .fluxograma-1.game-container .card-container {
   margin-right: -26px;
 }
+.oda-fluxograma .fluxograma-2.game-container .card-container {
+  position: static;
+  transform: unset;
+}
 .oda-fluxograma .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   position: fixed;
-  bottom: 10px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   max-width: 700px;
@@ -547,9 +560,12 @@
   opacity: 0;
   transition-duration: 0.3s;
   text-align: center;
-  position: relative;
   width: fit-content;
   margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .oda-fluxograma .feedback-negativo::before {
   content: "";
@@ -615,6 +631,19 @@
 }
 
 @media (max-width: 600px) {
+  .oda-fluxograma .feedback-negativo {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #333;
+    bottom: 15px;
+    z-index: 1000;
+    padding-left: 25px;
+    width: 90%;
+    pointer-events: none;
+  }
+  .oda-fluxograma .feedback-negativo::before {
+    left: 10px;
+  }
   .seta-mobile {
     display: block;
     position: absolute;
@@ -643,7 +672,7 @@
   }
   .oda-fluxograma .tela-1 .fluxograma-1.game-container,
   .oda-fluxograma .tela-2 .fluxograma-2.game-container {
-    padding-bottom: 0;
+    padding-bottom: 200px;
   }
   .oda-fluxograma .tela-1 .fluxograma-1 .fluxograma-row:not(.card-container),
   .oda-fluxograma .tela-2 .fluxograma-2 .fluxograma-row:not(.card-container) {
@@ -780,28 +809,37 @@
     bottom: 20px;
     right: -60px;
   }
-  .oda-fluxograma .fluxograma-2.game-container .nao-1 {
+  .oda-fluxograma .fluxograma-2.game-container .nao-1,
+  .oda-fluxograma .fluxograma-2.modelo .nao-1 {
     top: 240px;
     right: -280px;
   }
-  .oda-fluxograma .fluxograma-2.game-container .nao-1 img {
+  .oda-fluxograma .fluxograma-2.game-container .nao-1 img,
+  .oda-fluxograma .fluxograma-2.modelo .nao-1 img {
     height: 250px;
     transform: scale(0.8);
   }
+  .oda-fluxograma .fluxograma-2.modelo .nao-1 {
+    right: -182px;
+  }
   .oda-fluxograma .card-container {
-    position: static;
+    width: 90%;
+    top: 70%;
+    bottom: unset;
+    z-index: 10;
     margin-right: auto !important;
     margin-left: auto;
-    transform: unset;
   }
-  .oda-fluxograma .fluxograma-2.game-container .nao-1 .seta-4-mobile {
+  .oda-fluxograma .fluxograma-2.game-container .nao-1 .seta-4-mobile,
+  .oda-fluxograma .fluxograma-2.modelo .nao-1 .seta-4-mobile {
     transform: rotate(90deg);
     width: 230px;
     height: 190px;
     position: absolute;
     right: -63px;
   }
-  .oda-fluxograma .fluxograma-2.game-container .nao-1 p {
+  .oda-fluxograma .fluxograma-2.game-container .nao-1 p,
+  .oda-fluxograma .fluxograma-2.modelo .nao-1 p {
     position: absolute;
     bottom: -250px;
     right: 35px;
