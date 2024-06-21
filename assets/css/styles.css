@@ -87,6 +87,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .oda-fluxograma .tela-1 .btn-fluxograma,
 .oda-fluxograma .tela-2 .btn-fluxograma {
@@ -812,7 +814,6 @@
   .oda-fluxograma .fluxograma-2.game-container .nao-1,
   .oda-fluxograma .fluxograma-2.modelo .nao-1 {
     top: 240px;
-    right: -280px;
   }
   .oda-fluxograma .fluxograma-2.game-container .nao-1 img,
   .oda-fluxograma .fluxograma-2.modelo .nao-1 img {
@@ -822,13 +823,16 @@
   .oda-fluxograma .fluxograma-2.modelo .nao-1 {
     right: -182px;
   }
-  .oda-fluxograma .card-container {
+  .oda-fluxograma .card-container,
+  .oda-fluxograma .fluxograma-2.game-container .card-container {
+    position: fixed;
     width: 90%;
     top: 70%;
     bottom: unset;
     z-index: 10;
     margin-right: auto !important;
     margin-left: auto;
+    transform: translateX(-50%);
   }
   .oda-fluxograma .fluxograma-2.game-container .nao-1 .seta-4-mobile,
   .oda-fluxograma .fluxograma-2.modelo .nao-1 .seta-4-mobile {
@@ -837,6 +841,9 @@
     height: 190px;
     position: absolute;
     right: -63px;
+  }
+  .oda-fluxograma .fluxograma-2.modelo .nao-1 .seta-4-mobile {
+    right: 67px;
   }
   .oda-fluxograma .fluxograma-2.game-container .nao-1 p,
   .oda-fluxograma .fluxograma-2.modelo .nao-1 p {
