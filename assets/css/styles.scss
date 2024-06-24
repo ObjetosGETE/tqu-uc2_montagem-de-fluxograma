@@ -129,7 +129,7 @@ $dark-grey: #5E6E7D;
             transform: translateY(50%) translateX(-50%);
             border-radius: 15px;
             width: 600px;
-            max-width: 100%;
+            max-width: 95%;
             background-color: $dark-grey;
             padding: 25px 30px;
             transition-duration: 1s;
@@ -694,9 +694,9 @@ $dark-grey: #5E6E7D;
 @media (max-width: 600px) {
     .oda-fluxograma .feedback-negativo {
         position: fixed;
-        background-color: #fff;
+        background-color: rgba(255, 190, 190, 1);
         box-shadow: 3px 3px 3px #333;
-        bottom: 15px;
+        bottom: 225px;
         z-index: 1000;
         padding-left: 25px;
         width: 90%;
@@ -955,6 +955,10 @@ $dark-grey: #5E6E7D;
         position: absolute;
         bottom: -250px;
         right: 35px;
+    }
+
+    .oda-fluxograma .fluxograma-2.modelo .nao-1 p {
+        right: 165px;
     }
 
 }
